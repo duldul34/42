@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 00:37:22 by ryoon             #+#    #+#             */
-/*   Updated: 2022/05/19 02:05:01 by ryoon            ###   ########.fr       */
+/*   Created: 2022/05/19 04:17:24 by ryoon             #+#    #+#             */
+/*   Updated: 2022/05/19 04:17:24 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
-	size_t	j;
-	char	*substr;
+	t_list	*result;
+	t_list	*curr;
 
-	if (!s)
+	if (!lst || !f)
 		return (0);
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
-		return (0);
-	i = 0;
-	j = 0;
-	while (s[i])
+	result = 0;
+	while (lst)
 	{
-		if (i >= start && j < len)
+		curr = ft_lstnew(f(lst->content));
+		if (!curr)
 		{
-			substr[j] = s[i];
-			j++;
+			ft_lstclear(&result, del);
+			return (0);
 		}
-		i++;
+		ft_lstadd_back(&result, temp);
+		curr = curr->next;
+		lst = lst->next;
 	}
-	substr[j] = '\0';
-	return (substr);
+	return (result);
 }
