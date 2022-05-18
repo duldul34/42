@@ -6,19 +6,16 @@
 #    By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 04:34:07 by ryoon             #+#    #+#              #
-#    Updated: 2022/05/19 04:44:36 by ryoon            ###   ########.fr        #
+#    Updated: 2022/05/19 04:58:22 by ryoon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	      = libft.a
 
-CC		= gcc
-CFLAG	      = -Wall -Wextra -Werror
-
-RM		= rm -f
-
-AR		= ar
-ARFLAGS       = crs
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
+AR = ar rcs
 
 INCLUDES	= ./libft.h
 
@@ -67,27 +64,27 @@ SRCS_BONUS = ft_lstnew \
 				ft_lstiter \
 				ft_lstmap \
 
-OBJS	= $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
+bonus : $(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $^
 
 all : $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAG) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(RMFLAG) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean : clean
-	$(RM) $(RMFLAG) $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
 
 $(NAME) : $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
-
-bonus : $(OBJS) $(OBJS_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $^
+	$(AR) $@ $^
 
 .PHONY : all clean fclean re
