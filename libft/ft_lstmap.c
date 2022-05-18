@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&result, del);
 			return (0);
 		}
-		ft_lstadd_back(&result, temp);
+		ft_lstadd_back(&result, curr);
 		curr = curr->next;
 		lst = lst->next;
 	}

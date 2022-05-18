@@ -6,7 +6,7 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 02:21:47 by ryoon             #+#    #+#             */
-/*   Updated: 2022/05/19 02:23:17 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/05/19 05:24:00 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-	i = 0;
 	while (n--)
 	{
 		if (*ptr1 != *ptr2)

@@ -24,10 +24,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (i > 0)
 	{
 		if (last[i] == find)
-			return (last + i);
+			return ((char *)(last + i));
 		i--;
 	}
 	if (last[i] == find)
-		return (last);
+		return ((char *)last);
 	return (0);
 }
