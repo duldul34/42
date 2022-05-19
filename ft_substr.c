@@ -12,15 +12,28 @@
 
 #include "libft.h"
 
+static size_t	get_size(char const *s, unsigned int start, size_t len)
+{
+	int	s_len;
+
+	s_len = ft_strlen(s);
+	if ((size_t)s_len < (size_t)start + len)
+		return ((size_t)(s_len - start + 1));
+	else
+		return (len + 1);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	size_t	size;
 	char	*substr;
 
 	if (!s)
 		return (0);
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+	size = get_size(s, start, len);
+	substr = (char *)malloc(sizeof(char) * size);
 	if (!substr)
 		return (0);
 	i = 0;
