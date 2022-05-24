@@ -12,19 +12,10 @@
 
 #include "libft.h"
 
-static int	ck_overflow(size_t nmemb, size_t size)
-{
-	if ((nmemb * size / nmemb) != size || (nmemb * size / size) != nmemb)
-		return (-1);
-	return (0);
-}
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (ck_overflow(nmemb, size) == -1)
-		return (0);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (0);
