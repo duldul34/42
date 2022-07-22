@@ -6,13 +6,13 @@
 /*   By: ryoon <ryoon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 02:58:50 by ryoon             #+#    #+#             */
-/*   Updated: 2022/05/19 17:30:56 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/05/21 15:31:17 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ck_overflow(long result)
+static int	ck_overflow(long long result)
 {
 	if (result > 2147483647)
 		return (-1);
@@ -23,9 +23,9 @@ static int	ck_overflow(long result)
 
 int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	int		sign;
-	long	result;
+	size_t		i;
+	int			sign;
+	long long	result;
 
 	i = 0;
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
