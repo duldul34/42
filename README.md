@@ -1,5 +1,5 @@
-# 42
-42Seoul La Piscine, 본 과정 과제
+# Get Next Line
+파일로부터 한 줄씩 읽는 함수 구현
 
 
 ![en subject_1](https://user-images.githubusercontent.com/70087750/180590859-60687740-b69c-4285-9263-252cf325dede.jpg)
