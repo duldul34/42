@@ -1,7 +1,7 @@
 # Get Next Line
 파일로부터 한 줄씩 읽는 함수 구현\
 result: 125/125\
-make relink 방지 구현, make bonus relink 방지 미구현\
+make relink 방지 구현, make bonus relink 방지 미구현
 
 ![en subject (1)_1](https://user-images.githubusercontent.com/70087750/180590991-6e588aed-d09b-427b-a38a-d6b374575185.jpg)
 ![en subject (1)_2](https://user-images.githubusercontent.com/70087750/180590992-cd95905d-3a26-4323-b6c0-e1bbf2c7c98f.jpg)
