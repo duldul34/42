@@ -1,7 +1,6 @@
 # Get Next Line
 파일로부터 한 줄씩 읽는 함수 구현
 
-
 ![en subject_1](https://user-images.githubusercontent.com/70087750/180590859-60687740-b69c-4285-9263-252cf325dede.jpg)
 ![en subject_2](https://user-images.githubusercontent.com/70087750/180590863-c759d8ef-a891-468a-a1b4-64f18208142e.jpg)
 ![en subject_3](https://user-images.githubusercontent.com/70087750/180590864-4855d0c2-f035-43cd-9604-01a6385701cb.jpg)
