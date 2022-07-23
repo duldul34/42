@@ -1,4 +1,4 @@
-# Get Next Line
+# libft
 나만의 C 라이브러리 구현\
 result: 125/125\
 make relink 방지 구현, make bonus relink 방지 미구현
