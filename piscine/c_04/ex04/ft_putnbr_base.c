@@ -6,7 +6,7 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:24:40 by ryoon             #+#    #+#             */
-/*   Updated: 2022/01/18 13:59:44 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/01/18 17:14:27 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,11 @@ int	check_base(char *base)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int	base_len;
+	int		base_len;
+	long	nbr_long;
 
 	base_len = 0;
+	nbr_long = (long) nbr;
 	if (check_base(base) == 1)
 	{
 		while (base[base_len] != '\0')
@@ -55,14 +57,14 @@ void	ft_putnbr_base(int nbr, char *base)
 		if (nbr < 0)
 		{
 			ft_putchar('-');
-			nbr = -nbr;
+			nbr_long = -nbr_long;
 		}
-		if (nbr < base_len)
-			ft_putchar(base[nbr]);
-		if (nbr >= base_len)
+		if (nbr_long < base_len)
+			ft_putchar(base[nbr_long]);
+		if (nbr_long >= base_len)
 		{
-			ft_putnbr_base(nbr / base_len, base);
-			ft_putnbr_base(nbr % base_len, base);
+			ft_putnbr_base(nbr_long / base_len, base);
+			ft_putnbr_base(nbr_long % base_len, base);
 		}
 	}
 }

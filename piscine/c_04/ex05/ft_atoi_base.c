@@ -6,7 +6,7 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:02:06 by ryoon             #+#    #+#             */
-/*   Updated: 2022/01/18 15:36:12 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/01/18 17:12:04 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	check_base(char *base)
 	while (base[i] != '\0')
 	{
 		j = i + 1;
-		if (base[i] == ' ' || base[i] == '+' || base[i] == '-')
+		if (base[i] == ' ' || (base[i] >= 9 && base[i] <= 13))
+			return (0);
+		if (base[i] == '+' || base[i] == '-')
 			return (0);
 		if (base[i] < 32 || base[i] > 126)
 			return (0);

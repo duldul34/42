@@ -6,7 +6,7 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:52:31 by ryoon             #+#    #+#             */
-/*   Updated: 2022/01/19 16:58:48 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/01/20 14:05:44 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_prime(int nb)
 	i = 2;
 	if (nb < 2)
 		return (0);
-	while (i * i <= nb)
+	while (i * i <= nb && i <= 46340)
 	{
 		if (nb % i == 0)
 			return (0);
@@ -28,16 +28,12 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	int	i;
+	long long	i;
 
 	if (nb < 2)
 		return (2);
 	i = nb;
-	while (i < 2 * nb)
-	{
-		if (ft_is_prime(i))
-			return (i);
+	while (!ft_is_prime(i))
 		i++;
-	}
-	return (0);
+	return (i);
 }

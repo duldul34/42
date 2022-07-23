@@ -6,16 +6,16 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:34:18 by ryoon             #+#    #+#             */
-/*   Updated: 2022/01/19 17:07:50 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/01/20 13:41:12 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	long long	i;
 
 	i = 1;
-	if (nb == 0)
+	if (nb <= 0)
 		return (0);
 	while (i * i < nb && i <= 46340)
 		i++;

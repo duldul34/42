@@ -6,7 +6,7 @@
 /*   By: ryoon <ryoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:39:27 by ryoon             #+#    #+#             */
-/*   Updated: 2022/01/19 16:48:54 by ryoon            ###   ########.fr       */
+/*   Updated: 2022/01/20 14:04:37 by ryoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_prime(int nb)
 	i = 2;
 	if (nb < 2)
 		return (0);
-	while (i * i <= nb)
+	while (i * i <= nb && i <= 46340)
 	{
 		if (nb % i == 0)
 			return (0);
