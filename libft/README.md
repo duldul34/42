@@ -1,5 +1,5 @@
 # Get Next Line
-파일로부터 한 줄씩 읽는 함수 구현\
+나만의 C 라이브러리 구현\
 result: 125/125\
 make relink 방지 구현, make bonus relink 방지 미구현
 
