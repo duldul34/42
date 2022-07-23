@@ -1,5 +1,8 @@
 # BSQ
-Find Biggest Square
+Find Biggest Square\
+- Perl 언어를 사용하여 장애물과 빈 공간으로 이루어진 직사각형 형태의 지도를 제작\
+- 제작된 지도에서 장애물을 피하여 가장 큰 정사각형을 찾아 출력\
+- 지도 parsing 및 지도 에러 검증까지 진행, 이후 미구현
 
 ![bsq en_1](https://user-images.githubusercontent.com/70087750/180591216-7d1f557f-2170-43c9-8b7d-4dfadf6243ac.jpg)
 ![bsq en_2](https://user-images.githubusercontent.com/70087750/180591217-0d62b27c-1a6d-4de7-8fff-7f8d2acba806.jpg)
