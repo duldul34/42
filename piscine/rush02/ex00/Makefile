@@ -7,7 +7,6 @@ TARGET = rush-02
 SRCS = $(notdir $(wildcard $(SRC_DIR)/*.c))
 OBJS = $(SRCS:.c=.o)
 OBJECTS = $(patsubst %.o,$(OBJ_DIR)/%.o,$(OBJS))
-DEPS = $(OBJECTS:.o=.d)
 
 all: $(TARGET)
 .PHONY: all clean fclean re
@@ -24,5 +23,3 @@ $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
 
 $(TARGET) : $(OBJECTS)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET) $(LDFLAGS)
-
--include $(DEPS)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lib.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dseo <dseo@student.42seoul.kr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/23 16:59:56 by dseo              #+#    #+#             */
+/*   Updated: 2022/01/23 17:02:24 by dseo             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "ft_lib.h"
 
@@ -19,23 +31,6 @@ unsigned int	ft_atoi(char *str)
 		idx++;
 	}
 	return (num);
-}
-
-void	set_memory(char **str_addr, int size)
-{
-	int		i;
-	char	*r_str;
-
-	*r_str = (char *)malloc(sizeof(char) * size);
-	if (r_str == NULL)
-		return ;
-	i = 0;
-	while (i < size)
-	{
-		r_str[i] = '0';
-		i++;
-	}
-	*str_addr = r_str;
 }
 
 void	free_memory(char **str)

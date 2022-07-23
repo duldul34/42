@@ -1,6 +1,0 @@
-{
-	"files.exclude": {
-		".vscode": true,
-	},
-	"codam-norminette-3.regex": "ft_.*\\.[ch]"
-}
